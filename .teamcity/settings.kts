@@ -34,10 +34,10 @@ project {
 }
 
 object Build : BuildType({
-    name = "Build 222"
+    name = "Build 31"
 
     params {
-        param("env.GH_USERNAME", "777lexx777")
+        param("env.GH_USERNAME", "777Lexx777")
     }
 
     vcs {
