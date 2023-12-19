@@ -37,7 +37,7 @@ object Build : BuildType({
     name = "Build 222"
 
     params {
-        param("env.GH_USERNAME", "TFK70")
+        param("env.GH_USERNAME", "777lexx777")
     }
 
     vcs {
@@ -56,7 +56,7 @@ object Build : BuildType({
                 source = file {
                     path = "Dockerfile"
                 }
-                namesAndTags = "ghcr.io/tfk70/testtodo:1.0"
+                namesAndTags = "ghcr.io/777lexx777/testtodo:1.0"
             }
         }
         script {
@@ -66,14 +66,14 @@ object Build : BuildType({
         dockerCommand {
             name = "Push image"
             commandType = push {
-                namesAndTags = "ghcr.io/tfk70/testtodo:1.0"
+                namesAndTags = "ghcr.io/777lexx777/testtodo:1.0"
             }
         }
         script {
             name = "Connect to kubernetes cluster"
             scriptContent = """
                 kubectl config set-credentials kubeuser/minikube --username=kubeuser --password=kubepassword
-                kubectl config set-cluster minikube --insecure-skip-tls-verify=true --server=http://127.0.0.1:7070
+                kubectl config set-cluster minikube --insecure-skip-tls-verify=true --server=http://127.0.0.1:8070
                 kubectl config set-context default/minikube/kubeuser --user=kubeuser/minikube --namespace=default --cluster=minikube
                 kubectl config use-context default/minikube/kubeuser
             """.trimIndent()
