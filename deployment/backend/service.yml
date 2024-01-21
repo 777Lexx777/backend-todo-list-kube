@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: backend-todo
+  name: backend-todo-list-kube
   namespace: practice
   labels:
     app: backend-todo-list-kube
