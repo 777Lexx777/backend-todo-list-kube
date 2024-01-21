@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: backend-todo
+  name: backend-todo-list-kube
   namespace: practice
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: backend-todo
+      app: backend-todo-list-kube
   template:
     metadata:
       labels:
-        app: backend-todo
+        app: backend-todo-list-kube
     spec:
       containers:
-        - name: backend-todo
+        - name: backend-todo-list-kube
           image: ghcr.io/tfk70/testtodo:1.0
           imagePullPolicy: IfNotPresent
           resources:
