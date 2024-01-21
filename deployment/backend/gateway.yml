@@ -13,6 +13,6 @@ spec:
           pathType: Prefix
           backend:
             service:
-              name: backend-todo
+              name: backend-todo-list-kube
               port:
                 number: 8080
